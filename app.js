@@ -54,4 +54,11 @@ function createWallet() {
     }, 0);
 
   }
+
+  function getTotalExpense() {
+    let totalExpense = transactions.filter(transaction => transaction.type === "Expense");
+    return totalExpense.reduce((totalAmount, currentValue) => {
+      return totalAmount += currentValue.amount;
+    }, 0);
+  }
 }
