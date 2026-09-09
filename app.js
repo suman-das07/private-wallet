@@ -46,4 +46,12 @@ function createWallet() {
       };
     });
   }
+
+  function getTotalDeposit() {
+    let totalDeposit = transactions.filter(transaction => transaction.type === "Deposit");
+    return totalDeposit.reduce((totalAmount, currentValue) => {
+      return totalAmount += currentValue.amount;
+    }, 0);
+
+  }
 }
