@@ -61,4 +61,20 @@ function createWallet() {
       return totalAmount += currentValue.amount;
     }, 0);
   }
+
+  function getSummary() {
+    return {
+      Total_Deposit: getTotalDeposit(),
+      Total_Expense: getTotalExpense(),
+      Balance: getBalance()
+    }
+  }
+
+  function clearWallet() {
+    balance = 0;
+    transactions.length = 0;
+    transactionID = 1;
+
+    return "Wallet Cleared Successfully";
+  }
 }
