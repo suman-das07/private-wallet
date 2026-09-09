@@ -89,3 +89,25 @@ function createWallet() {
     clearWallet
   };
 }
+
+const wallet = createWallet();
+wallet.addMoney(1000);
+wallet.addMoney(2000);
+wallet.spendMoney(100);
+wallet.spendMoney(500);
+
+
+
+console.log(wallet.getTransaction());
+console.log(wallet.getTransaction("Deposit"));
+console.log(wallet.getTransaction("Expense"));
+
+console.log(wallet.getSummary());
+
+console.log(wallet.clearWallet())
+
+console.log(wallet.getTransaction());
+console.log(wallet.getTransaction("Deposit"));
+console.log(wallet.getTransaction("Expense"));
+
+console.log(wallet.getSummary());
