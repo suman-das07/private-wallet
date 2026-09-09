@@ -77,4 +77,15 @@ function createWallet() {
 
     return "Wallet Cleared Successfully";
   }
+
+  return {
+    addMoney,
+    spendMoney,
+    getBalance,
+    getTransaction,
+    getTotalDeposit,
+    getTotalExpense,
+    getSummary,
+    clearWallet
+  };
 }
