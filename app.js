@@ -30,4 +30,20 @@ function createWallet() {
     transactions.push({ id: transactionID++, type: "Expense", amount: amount, date: day() });
     // console.log(transactions);
   }
+
+  function getBalance() {
+    return balance;
+  }
+
+  function getTransaction(type) {
+    let filteredExpense = transactions.filter(transaction => transaction.type === type || !type);
+    return filteredExpense.map(function (transaction) {
+      return {
+        id: transaction.id,
+        type: transaction.type,
+        amount: transaction.amount,
+        date: transaction.date,
+      };
+    });
+  }
 }
