@@ -1,3 +1,16 @@
+function day() {
+  const now = new Date();
+
+  let fullFormat = now.toLocaleDateString("en-US", {
+    // weekday: "long",
+    month: "numeric",
+    day: "numeric",
+    year: "numeric"
+  });
+
+  return fullFormat;
+}
+
 function createWallet() {
   let balance = 0;
 
